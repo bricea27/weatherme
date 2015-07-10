@@ -1,0 +1,80 @@
+@import "partials/reset";
+@import "vendor/weathericons";
+@import "materialize/materialize";
+
+/* Custom SCSS Goes Here... */
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+.wrapper {
+  height: 100%;
+
+  .search-weather {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+
+}
+
+.weather, .news {
+  height: 100%;
+}
+
+.weather {
+  z-index: 9999;
+  @extend .blue, .lighten-4, .white-text;
+  //@include gradient(linear, #65f6b1, #23a1f1);
+
+  .valign {
+    width: 100%;
+    text-align: center;
+  }
+
+}
+
+.news {
+  overflow: scroll;
+  position: relative;
+
+  h3 {
+
+  }
+
+
+}
+
+
+/* Media Queries */
+@media #{$small-and-down} {
+  // styles for small screens and down
+  html, body {
+    overflow: visible;
+  }
+
+  .weather {
+    height: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+  .news {
+    position: absolute;
+    top: 50%;
+  }
+
+
+}
+@media #{$medium-and-up} {
+  // styles for medium screens and larger
+}
+@media #{$medium-and-down} {
+  // styles for medium screens and down
+}
+@media #{$large-and-up} {
+  // styles for large screens and up
+}

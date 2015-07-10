@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<!-- head -->
+<% include partials/header %>
+<div class="row wrapper">
+  <div class="col s12 m6 weather z-depth-2 valign-wrapper">
+    <div class="search-weather">
+      <a class="btn-floating btn-large waves-effect waves-light red dropdown-button" a href="#" data-activates="search-dropdown"><i class="material-icons">search</i></a>
+
+      <!-- Dropdown Structure -->
+      <ul id='search-dropdown' class='dropdown-content'>
+        <li><a href="#!">one</a></li>
+        <li><a href="#!">two</a></li>
+        <li class="divider"></li>
+        <li><a href="#!">three</a></li>
+      </ul>
+
+    </div>
+    <div class="valign white-text">
+
+      <h1><i class="wi wi-night-cloudy"></i></h1>
+      <h2 id="currentSummary"></h2>
+      <h3 id="currentTemp"></h3>
+
+      <div class="preloader-wrapper big active" id="loader">
+        <div class="spinner-layer spinner-blue-only">
+          <div class="circle-clipper left">
+            <div class="circle"></div>
+          </div><div class="gap-patch">
+            <div class="circle"></div>
+          </div><div class="circle-clipper right">
+            <div class="circle"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="col sm12 m6 news">
+
+    <ul id="newsSection">
+    </ul>
+
+
+  </div>
+
+</div>
+
+
+
+<!-- footer -->
+<% include partials/footer %>
